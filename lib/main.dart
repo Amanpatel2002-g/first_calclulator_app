@@ -1,3 +1,4 @@
+import 'package:calculator/singlebutton.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class MainPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(titlestr),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleButtonPage.SingleButtonDesign(2,context),
         ),
       ),
     );
