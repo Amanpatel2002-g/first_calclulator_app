@@ -1,20 +1,19 @@
+import 'package:calculator/calculation.dart';
 import 'package:flutter/material.dart';
 
 class SingleButtonPage {
   // ignore: non_constant_identifier_names
-  static Container SingleButtonDesign(int numToDisplay, BuildContext context) {
+  static dynamic SingleButtonDesign(String numToDisplay, BuildContext context) {
     return Container(
-      height: 70,
-      width: 70,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(12),
         color: const Color.fromARGB(255, 93, 91, 91),
       ),
       child: Center(
         child: Text(
-          numToDisplay.toString(),
+          numToDisplay,
           style: const TextStyle(
-            fontSize: 37,
+            fontSize: 30,
             color: Color.fromARGB(255, 255, 255, 255),
           ),
         ),
