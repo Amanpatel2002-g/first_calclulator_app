@@ -2,8 +2,8 @@ import 'package:calculator/buttons.dart';
 import 'package:calculator/calculation.dart';
 import 'package:calculator/singlebutton.dart';
 import 'package:flutter/material.dart';
-
-var sign = ["+", "-", "/", "*", "%", "."];
+import 'logic/calulations_logic.dart';
+var sign = ["+", "-", "/", "*", "."];
 void main() {
   runApp(const MainPage());
 }
@@ -74,7 +74,15 @@ class _MainPageState extends State<MainPage> {
                                   CalulationPage.showontext(i.toString());
                                   setState(() {});
                                 },
-                              )
+                              ),
+                              GestureDetector(
+                                child: SingleButtonPage.SingleButtonDesign(
+                                    "=", context),
+                                onTap: () {
+                                  CalulationPage.stringtoshow = calcLoggic.calLogic();
+                                  setState(() {});
+                                },
+                              ),
                           ],
                         )),
                   ))

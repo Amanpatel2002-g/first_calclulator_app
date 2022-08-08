@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'singlebutton.dart';
 
 class CalulationPage {
-  static String stringtoshow =
-      "555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555";
+  static String stringtoshow = "";
   static dynamic showontext(var x) {
     stringtoshow = stringtoshow + x;
   }
